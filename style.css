@@ -1,0 +1,91 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body{
+    background-color: rgb(47, 59, 59);
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+overflow: hidden;
+}
+
+#saat{
+width: 250px;
+height: 250px;
+background-color: rgba(250, 235, 215, 0.8);
+ border-radius: 50%;
+ border: solid 2px black;
+ position: relative;
+}
+
+#saat .reqem{
+    --rotation: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+    font-size: 1.5rem;
+}
+
+#saat .reqem1{--rotation: 30deg;}
+#saat .reqem2{--rotation: 60deg;}
+#saat .reqem3{--rotation: 90deg;}
+#saat .reqem4{--rotation: 120deg;}
+#saat .reqem5{--rotation: 150deg;}
+#saat .reqem6{--rotation: 180deg;}
+#saat .reqem7{--rotation: 210deg;}
+#saat .reqem8{--rotation: 240deg;}
+#saat .reqem9{--rotation: 270deg;}
+#saat .reqem10{--rotation: 300deg;}
+#saat .reqem11{--rotation: 330deg;}
+#saat .reqem12{--rotation: 360deg;}
+
+#saat .eqreb {
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    border: 1px solid white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+    transform-origin: bottom;
+    z-index:10;
+    transform: translateX(-50%) rotate(calc(var(--rotation)* 1deg));
+}
+
+#saat::after{
+    content: '';
+    position: absolute;
+    background-color: black;
+    z-index: 11;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+#saat .eqreb.saniye{
+    width: 3px;
+    height: 25%;
+    background-color: red;
+}
+
+#saat .eqreb.deqiqe{
+    width: 8px;
+    height: 35%;
+    background-color: black;
+
+}
+
+#saat .eqreb.saat{
+    width: 10px;
+    height: 30%;
+    background-color: black;
+}
